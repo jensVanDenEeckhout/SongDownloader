@@ -39,31 +39,20 @@ namespace SongDownloader
             if (theDialog.ShowDialog() == DialogResult.OK)
             {
                 string filename = theDialog.FileName;
-
                 string[] filelines = File.ReadAllLines(filename);
-
-
                 ChromeDriver driver = new ChromeDriver();
                 driver.Navigate().GoToUrl("https://www.mp3juices.cc/");
-
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                 for (int a = 0; a < filelines.Length; a++)
                 {
                     driver.Navigate().GoToUrl("https://www.mp3juices.cc/");
                     driver.SwitchTo().Window(driver.WindowHandles.First());
-
                     driver.FindElement(By.Id("query")).SendKeys(filelines[a]);
                     driver.FindElement(By.Id("button")).SendKeys(OpenQA.Selenium.Keys.Enter);
-                    //driver.FindElement(By.CssSelector(".download .1")).SendKeys(OpenQA.Selenium.Keys.Enter);
                     driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
                     driver.FindElement(By.XPath("//a[@class='download 1']")).SendKeys(OpenQA.Selenium.Keys.Enter);
                     driver.FindElement(By.ClassName("url")).SendKeys(OpenQA.Selenium.Keys.Enter);
-
-
                 }
-
-                //Test to see if it works
-
             }
         }
     }
