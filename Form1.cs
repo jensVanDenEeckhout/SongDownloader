@@ -12,6 +12,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.IO;
 
+using Newtonsoft.Json;
+using System.Configuration;
+using System.Net.Http;
 
 namespace SongDownloader
 {
@@ -54,6 +57,23 @@ namespace SongDownloader
                     driver.FindElement(By.ClassName("url")).SendKeys(OpenQA.Selenium.Keys.Enter);
                 }
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ChromeDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://www.youtube.com/playlist?list=PLolzHJ_EoFrdB-uyqS_-xp8pOLG8Nfu0Y");
+
+            IList<IWebElement> all = driver.FindElements(By.Id("video-title"));
+
+            String[] allText = new String[all.Count];
+            int i = 0;
+            foreach (IWebElement element in all)
+            {
+                allText[i++] = element.Text;
+            }
+
+
         }
     }
 }
