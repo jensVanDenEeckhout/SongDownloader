@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongDownloader", "SongDownl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yt api playlist downloader", "..\yt api playlist downloader\yt api playlist downloader.csproj", "{C657C5DB-4B73-4761-891D-27893DA392F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "songRenamer", "..\songRenamer\songRenamer.csproj", "{B40DBC70-09EF-4310-BCE0-80D8385CCFB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C657C5DB-4B73-4761-891D-27893DA392F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C657C5DB-4B73-4761-891D-27893DA392F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C657C5DB-4B73-4761-891D-27893DA392F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B40DBC70-09EF-4310-BCE0-80D8385CCFB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B40DBC70-09EF-4310-BCE0-80D8385CCFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B40DBC70-09EF-4310-BCE0-80D8385CCFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B40DBC70-09EF-4310-BCE0-80D8385CCFB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

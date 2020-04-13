@@ -55,6 +55,7 @@ namespace SongDownloader
                     driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
                     driver.FindElement(By.XPath("//a[@class='download 1']")).SendKeys(OpenQA.Selenium.Keys.Enter);
                     driver.FindElement(By.ClassName("url")).SendKeys(OpenQA.Selenium.Keys.Enter);
+                    System.Threading.Thread.Sleep(5000);
                 }
             }
         }
